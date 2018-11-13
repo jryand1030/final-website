@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
 body{
+    height:100%vh;
 	font-family: 'Gothic A1', sans-serif;
     font-size:16px;
-    background-image:url("/images/backround/backround.jpg");
+    background-image:url("/images/pexels-photo-886470\ \(1\).jpeg");
     background-size: cover;
+    background-position:center center;
     background-attachment: fixed;
     }
     @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
-    .body{
-        font-family: 'Gothic A1', sans-serif;
-        font-size:16px;
-        }
-        p{
-        color:#8c8c8f;
-        font-size:1em;
-        }
-        h1,h2,h3,h4,h5,h6{color:#323233;text-transform:uppercase;}
+   
     .navbar-brand  span{
         color: #fed136;
         font-size:25px;font-weight:700;letter-spacing:0.1em;
@@ -105,47 +99,241 @@ body{
         color:#fff;
         text-transform:uppercase;
     }
+    .particles-js-canvas-el{
+        display: block;
+        height:100%!important;
+        width:100vw!important;
+        margin:3px;
+        z-index: 4000;
+        position: relative;
+    }
+    #particles-js {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        left: 0
+    }
+    .content{
+        // transform: translate(0,-80%);
+        background-attachment: relative;
+        min-height:100vh; 
+        background-color: rgba(0,0,0,.5);
+
+    }
+
+    .card{
+        position: relative;
+        margin-top:-1%;
+        background-color: rgba(250, 248, 248, 0.8);
+    }
+    h2{
+        margin-top:15%;
+        line-height:120%;
+    }
+    .heading{
+        
+        text-align: center;
+        color:rgb(248, 240, 240);
+        font-size: 50px;
+        font-weight:bolder;
+        text-decoration: underline;
+        padding:5px;
+        
+    }
     .text-intro{
         width:90%;
         margin:auto;
         text-align:center;
         padding-top:30px;
     }
+   .container{
+       height:100%;
+       margin-top:2%;
+   }
+    footer{
+        background-color: rgba(15, 12, 12, 0.931);
+        height:100%;
+        p{
+            color:white;
+            line-height: 1000%;
+        }
+        
+            
+    }
+   
     
     
     /* mobile view */
     @media (max-width:500px)
-    {
-        .navbar-nav{
-            background-color:#000;
-            border-top:3px solid #fed136;
-            color:#fff;
-            z-index:1;
-            margin-top:5px;
-            }
+{
+    body{
+        height:100vh;
+        font-family: 'Gothic A1', sans-serif;
+        font-size:16px;
+        background-image:url("/images/pexels-photo-886470\ \(1\).jpeg");
+        background-size: cover;
+        background-position:center center;
+        background-attachment: fixed;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
+       
+        .navbar-brand  span{
+            color: #fed136;
+            font-size:25px;font-weight:700;letter-spacing:0.1em;
+            font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+        }
+        .nav-item{
+            font-size: 12px;
+            
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size:25px;
+            font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+            font-weight:700;
+            letter-spacing:0.1em;
+        }
+        #banner{
+            background-color: #2b2b2e;
+            opacity: .9;
+            
+         
+        }
         .navbar-nav .nav-item .nav-link{
-        padding: 0.7em 1em!important;
-        font-size: 100%;
-        font-weight: 500;
+            padding: 1.1em 1em!important;
+            font-size: 120%;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #fff;
+           font-family: 'Gothic A1', sans-serif;
+        }
+        .navbar-nav .nav-item .nav-link:hover{color:#fed136;}
+        .navbar-expand-md .navbar-nav .dropdown-menu{
+            border-top:3px solid #fed136;
+        }
+        .dropdown-item:hover{background-color:#fed136;color:#fff;}
+        nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
+            -moz-transition: padding-top .3s,padding-bottom .3s;
+            transition: padding-top .3s,padding-bottom .3s;
+            border: none;
+            }
+            
+         .shrink {
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: #212529;
+        }
+        .banner{
+            background-image:url('http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg');
+            text-align: center;
+            color: #fff;
+           
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
         .banner-text{
-        padding:150px 0 150px 0;
-    }
-    .banner-heading{
-        font-size: 30px;
-        line-height: 30px;
-        margin-bottom: 20px;
-    }
-    .banner-sub-heading{
-        font-size: 10px;
-        font-weight: 200;
-        line-height: 10px;
-        margin-bottom: 40px;
+            padding:200px 0 150px 0;
+        }
+        .banner-heading{
+            font-family: 'Lobster', cursive;
+            font-size: 75px;
+            font-weight: 700;
+            line-height: 100px;
+            margin-bottom: 30px;
+            color:#fff;
+        }
+        .banner-sub-heading{
+            font-family: 'Libre Baskerville', serif;
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 30px;
+            margin-bottom: 50px;
+            color:#fff;
+        }
+        
+        .btn-banner{
+            padding:5px 20px;
+            border-radius:10px;
+            font-weight:700;
+            line-height:1.5;
+            text-align:center;
+            color:#fff;
+            text-transform:uppercase;
+        }
+        .particles-js-canvas-el{
+            display: block;
+            height:100%!important;
+            width:100vw!important;
+            margin:3px;
+            z-index: 4000;
+            position: relative;
+        }
+        #particles-js {
+            width: 100%;
+            height: 80%;
+            position: fixed;
+            z-index: 0;
+            top: 0;
+            left: 0
+        }
+        .content{
+            // transform: translate(0,-80%);
+            background-position: relative;
+            min-height:400vh; 
+            background-color: rgba(0,0,0,.5);
+    
+        }
+    
+        .card{
+            position: relative;
+            margin-top:-1%;
+            background-color: rgba(250, 248, 248, 0.8);
+        }
+        h2{
+            margin-top:25%;
+            line-height:120%;
+        }
+        .heading{
+            margin-top:15%;
+            text-align: center;
+            color:rgb(248, 240, 240);
+            font-size: 50px;
+            font-weight:bolder;
+            text-decoration: underline;
+            padding:15px;
+            
+        }
+        .text-intro{
+            width:90%;
+            margin:auto;
+            text-align:center;
+            padding-top:30px;
+        }
+        footer{
+           
+            background-color: rgba(15, 12, 12, 0.931);
+            height:30%;
+            p{
+                color:white;
+                line-height: 1100%;
+            }
+            
+                
+        }
     }
     
-    }
-    
-    @media (max-width:768px){
+   
+@media screen and (orientation:landscape)
+and (min-device-width: 501px) 
+and (max-device-width: 800px) 
+{
         .banner-text{
         padding:150px 0 150px 0;
     }
@@ -159,9 +347,9 @@ body{
      
 
 .title{
-    margin-top:18%;
+    margin-top:90px;
     font-family:'shadows Into Light', cursive;
-    height:20%;
+   
 }
 h2{
     margin:3%;
@@ -169,7 +357,14 @@ h2{
     font-family:'shadows Into Light', cursive;
 }
 
+.content{
+    // transform: translate(0,-80%);
+    background-attachment: relative;
+    height:140vh;
+    margin-top:6%; 
+    background-color: rgba(0,0,0,.5);
 
+}
 
 .card{
     width: auto;
@@ -180,7 +375,7 @@ h2{
 
 
 img{
-    transform:perspective(500px);
+    transform:perspective(400px);
     height:45%;
     width:100%;
 }
@@ -191,18 +386,5 @@ h3{
 }
 
 
-@media (max-width:800px)
-{
-	.navbar-nav{
-		background-color:#000;
-		border-top:3px solid #fed136;
-		color:#fff;
-		z-index:1;
-		margin-top:5px;
-		}
-	.navbar-nav .nav-item .nav-link{
-	padding: 0.7em 1em!important;
-	font-size: 100%;
-    font-weight: 500;
-    }
-}
+
+
