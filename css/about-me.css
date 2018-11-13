@@ -1,0 +1,291 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #2c2e2d 0%, #edf3ed 100%);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  display: inline-block;
+  padding: 4px;
+}
+
+a:hover {
+  background-color: "Merriweather", serif;
+}
+
+@-webkit-keyframes roller {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100vh;
+  }
+}
+
+@keyframes roller {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100vh;
+  }
+}
+
+.newspaper {
+  display: -ms-grid;
+  display: grid;
+  width: 90%;
+  height: auto;
+  background: linear-gradient(135deg, #efefef 0%, white 17%, white 49%, lightgray 73%, #ededed 89%, #bcbcbc 100%);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 15% 24% auto;
+      grid-template-rows: 15% 24% auto;
+  color: #2a2d2f;
+  -webkit-box-shadow: 4px 4px 0 #cccccc, 8px 8px 0 #999999, 12px 12px 0 #666666, 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 0 #cccccc, 8px 8px 0 #999999, 12px 12px 0 #666666, 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ();
+  will-change: transform;
+  position: absolute;
+  z-index: 3;
+  -webkit-transform: rotate(0 deg);
+          transform: rotate(0 deg);
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: .9s;
+          animation-duration: .9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.newspaper.playing {
+  -webkit-animation-name: paper-spin;
+          animation-name: paper-spin;
+}
+
+@-webkit-keyframes paper-spin {
+  from {
+    -webkit-transform: rotate(-3000deg) scale(0.3) translateZ(0);
+            transform: rotate(-3000deg) scale(0.3) translateZ(0);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  to {
+    -webkit-transform: rotate(deg 0) scale(1) translateZ(0);
+            transform: rotate(deg 0) scale(1) translateZ(0);
+  }
+}
+
+@keyframes paper-spin {
+  from {
+    -webkit-transform: rotate(-3000deg) scale(0.3) translateZ(0);
+            transform: rotate(-3000deg) scale(0.3) translateZ(0);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  to {
+    -webkit-transform: rotate(deg 0) scale(1) translateZ(0);
+            transform: rotate(deg 0) scale(1) translateZ(0);
+  }
+}
+
+.title {
+  margin-top: 0;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #2a2d2f;
+}
+
+h3 {
+  font-family: "Merriweather", serif;
+  font-size: 70%;
+}
+
+.todays-weather {
+  margin-top: 0;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 1;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#day {
+  text-align: right;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 1;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.headline {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.coverimage {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 0 0.5rem;
+}
+
+.coverimage iframe {
+  width: 100%;
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.copy {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 5;
+  -webkit-column-count: 2;
+          column-count: 2;
+  padding: 1vw;
+}
+
+h1 {
+  font-family: "Pirata One", cursive;
+  font-size: 4.8vw;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  font-size: 4.5vw;
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 1vw;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pullquote {
+  font-size: 1.2vw;
+  border-top: 0.2vw solid #2a2d2f;
+  border-bottom: 0.2vw solid #2a2d2f;
+  margin: 1vw 0;
+  padding: 1vw 0;
+}
+
+@media screen and (max-width: 40em) {
+  .coverimage {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 0 0.5rem;
+    margin-top: 70px;
+    margin-left: 5px;
+  }
+  .coverimage iframe {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .copy {
+    float: left;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    -ms-grid-row: 7;
+        grid-row-start: 7;
+    grid-row-end: 5;
+    -webkit-column-count: 1;
+            column-count: 1;
+    padding: 1vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  p {
+    font-size: 12px;
+    font-family: "Merriweather", serif;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .headline {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .menu {
+    text-align: center;
+  }
+  .menu a {
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .pullquote {
+    font-size: 1rem;
+    font-family: "Merriweather", serif;
+  }
+}
+/*# sourceMappingURL=about-me.css.map */

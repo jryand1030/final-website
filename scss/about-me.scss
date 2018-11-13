@@ -1,0 +1,237 @@
+$font-header: "Pirata One", cursive;
+$font-body: "Merriweather", serif;
+$col-black: #2a2d2f;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #2c2e2d 0%, #edf3ed 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  display:inline-block;
+  padding:4px;
+}
+a:hover{
+  background-color: $font-body;
+}
+
+@keyframes roller {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100vh;
+  }
+}
+
+.newspaper {
+  display:grid;
+  width: 90%;
+  height:auto;
+  background: linear-gradient(
+    135deg,
+    rgba(239, 239, 239, 1) 0%,
+    rgba(255, 255, 255, 1) 17%,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(211, 211, 211, 1) 73%,
+    rgba(237, 237, 237, 1) 89%,
+    rgba(188, 188, 188, 1) 100%
+  );
+
+  //display:none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15% 24% auto;
+  color: $col-black;
+  box-shadow: 4px 4px 0 darken(white, 20), 8px 8px 0 darken(white, 40),
+    12px 12px 0 darken(white, 60), 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ();
+  will-change: transform;
+  position: absolute;
+  z-index: 3;
+  transform: rotate(0 deg);
+  animation-timing-function: linear;
+
+  animation-duration: .9s;
+  animation-fill-mode: forwards;
+  &.playing {
+    animation-name: paper-spin;
+  }
+}
+
+@keyframes paper-spin {
+  from {
+    transform: rotate(-3000deg) scale(0.3) translateZ(0);
+    filter: blur(10px);
+  }
+  to {
+    transform: rotate(deg 0) scale(1) translateZ(0);
+  }
+}
+
+.title {
+  margin-top:0;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $col-black;
+}
+h3{
+  font-family:$font-body;
+  font-size: 70%;
+}
+.todays-weather{
+  margin-top: 0;
+  grid-column-start:1;
+  grid-column-end:1;
+  grid-row-start:1;
+  grid-row-end:1;
+  align-items: flex-end;
+
+}
+
+#day{
+  text-align: right;
+  font-family: $font-body;
+  font-size:14px;
+  grid-column-start:1;
+  grid-column-end:5;
+  grid-row-start:1;
+  grid-row-end:1;
+  align-items: flex-end;
+
+}
+
+.headline {
+ 
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+
+.coverimage {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 0 0.5rem;
+
+  iframe {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+  }
+}
+
+.copy {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  column-count: 2;
+  padding: 1vw;
+}
+
+h1 {
+  font-family: $font-header;
+  font-size: 4.8vw;
+  margin: 0;
+}
+
+h2 {
+  font-family: $font-body;
+  text-transform: uppercase;
+  font-size: 4.5vw;
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 1vw;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pullquote {
+  font-size: 1.2vw;
+  border-top: 0.2vw solid $col-black;
+  border-bottom: 0.2vw solid $col-black;
+  margin: 1vw 0;
+  padding: 1vw 0;
+}
+
+@media screen and (max-width: 40em){
+  .coverimage{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 0 0.5rem;
+    margin-top:70px;
+    margin-left:5px;
+    iframe {
+      width: 100%;
+      height:100%;
+      object-fit: cover;
+    }
+  
+  }
+}
+
+@media screen and (max-width: 40em){
+  .copy {
+    float:left;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 5;
+    column-count: 1;
+    padding: 1vw;
+    height:auto;
+  }
+
+  }
+  @media screen and (max-width: 40em){
+    p{
+      font-size:12px;
+      font-family: $font-body;
+
+    }
+  }
+  @media screen and (max-width: 40em){
+    .headline{
+      height:50%;
+    }
+    }
+  @media screen and (max-width: 40em){
+    .menu{
+    text-align: center;
+    
+        a{
+          display: inline-block;
+          padding: 10px;
+          
+      }
+    }
+  }
+  @media screen and (max-width: 40em){
+    .pullquote{
+      font-size: 1rem;
+      font-family: $font-body;
+      }
+    }
