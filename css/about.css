@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
 @import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand"');
 html, body {
   margin: 0;
   padding: 0;
@@ -97,20 +98,21 @@ img {
 }
 
 .page2 {
-  background-color: #1b1c1d;
+  background-color: black;
+  background-size: cover;
+  background-image: url(/images/backround/pexels-photo-1437866.jpeg);
   height: 100vh;
   width: 100vw;
 }
 
 .page2 .intro {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
+  font-family: 'Patrick Hand', cursive;
 }
 
 .page2 p {
-  color: white;
-  background-color: rgba(19, 18, 18, 0.9);
-  border: round;
+  color: #000;
+  background-color: rgba(20, 18, 18, 0.4);
+  border-color: grey;
 }
 
 .page2 button {
@@ -199,9 +201,8 @@ footer p {
     font-weight: bold;
   }
   .page2 p {
-    color: white;
-    background-color: rgba(19, 18, 18, 0.2);
-    border: round;
+    color: #fdf9f9;
+    background-color: rgba(3, 3, 3, 0.3);
   }
   .foot {
     line-height: 200%;
